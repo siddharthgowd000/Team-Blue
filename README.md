@@ -37,3 +37,22 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/yourusername/relief.git
    cd relief
+2. **Install frontend dependencies:**
+
+```bash
+npm install
+3.  **Start the React frontend:**
+
+```bash
+npm start
+4.  **Navigate to the backend directory and install Python dependencies:**
+
+```bash
+cd backend
+pip install -r requirements.txt
+5.  **Run the backend server:**
+
+```bash
+
+flask run
+
