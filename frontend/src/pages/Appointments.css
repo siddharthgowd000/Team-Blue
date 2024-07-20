@@ -1,0 +1,187 @@
+/* Appointments.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .appointments-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #f3f4f6;
+    color: #333;
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .calendar-container {
+    flex: 2;
+    padding: 20px;
+    overflow: auto;
+    background-color: #f3f4f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .date-picker {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  input[type="time"],
+  select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+  }
+  
+  input[type="time"]:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .doctors-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+  }
+  
+  .doctor-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+   
+  }
+  
+  .doctor-item.selected {
+    background-color: #e0f3ff;
+    border-color: #007bff;
+  }
+  
+  .doctor-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .doctor-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 30px auto;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .appointment {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f0ad4e;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .appointment.completed {
+    background-color: #5cb85c;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .appointment {
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  .react-calendar {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .react-calendar__tile {
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  .react-calendar__tile:enabled:hover,
+  .react-calendar__tile:enabled:focus {
+    background-color: #e0f3ff;
+    border-radius: 10%;
+  }
+  
+  .react-calendar__tile--now {
+    background: #007bff;
+    color: white;
+    border-radius: 10%;
+  }
+  
+  .react-calendar__tile--active {
+    background: #0056b3;
+    color: white;
+    border-radius: 10%;
+  }
+  
