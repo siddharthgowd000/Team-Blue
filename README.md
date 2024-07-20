@@ -39,20 +39,20 @@ Ensure you have the following installed:
    cd relief
 2. **Install frontend dependencies:**
 
-```bash
-npm install
+   ```bash
+   npm install
 3.  **Start the React frontend:**
 
-```bash
-npm start
+      ```bash
+      npm start
 4.  **Navigate to the backend directory and install Python dependencies:**
 
-```bash
-cd backend
-pip install -r requirements.txt
+      ```bash
+      cd backend
+      pip install -r requirements.txt
 5.  **Run the backend server:**
 
-```bash
-
-flask run
+      ```bash
+      
+      flask run
 
