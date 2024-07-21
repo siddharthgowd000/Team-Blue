@@ -6,11 +6,11 @@ RELIEF is an AI/ML-powered medical diagnosis system capable of detecting brain t
 
 ## Features
 
-- **Medical Diagnosis**: Detect brain tumors, lung cancer, and breast cancer using AI/ML.
-- **Prescription Generation**: Automatically generates prescriptions based on diagnosis.
-- **Appointments**: Schedule appointments with doctors based on availability, time, date, and nearby locations.
-- **Communication**: Chat and video call functionality with doctors.
-- **User History**: Saves users' history and previous consultations.
+**Advanced Medical Diagnosis:** Utilizes AI/ML to accurately detect brain tumors, lung cancer, and breast cancer, ensuring early and precise diagnosis.
+**Automated Prescription Generation:** Automatically generates accurate prescriptions based on diagnostic results, streamlining the treatment process.
+**Appointment Scheduling:** Allows users to schedule appointments with doctors based on availability, time, date, and nearby locations, enhancing accessibility to medical care.
+**Seamless Communication:** Integrates chat and video call functionality for direct communication with doctors, providing comprehensive telehealth services.
+**Comprehensive User History:** Maintains detailed records of users' medical history and previous consultations, ensuring continuity of care.
 
 ## Tech Stack
 
