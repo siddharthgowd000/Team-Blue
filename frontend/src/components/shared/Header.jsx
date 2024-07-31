@@ -8,8 +8,8 @@ export default function Header() {
 	const navigate = useNavigate();
 
 	const handleSignOut = () => {
-		localStorage.removeItem('financialtoken');
-		navigate('/Signin'); // Assuming your sign-in page is at '/signin'
+		localStorage.removeItem('relieftoken');
+		navigate('/signin'); 
 	};
 
 	return (

@@ -22,6 +22,7 @@ const Appointments = () => {
   const [appointments, setAppointments] = useState([]);
   const [availableDoctors, setAvailableDoctors] = useState([]);
 
+
   const handleDateChange = (date) => {
     setDate(date);
   };

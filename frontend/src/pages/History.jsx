@@ -2,15 +2,30 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './History.css'; // Import the CSS file for styling
+import API_URL from '../url';
+import { useNavigate } from 'react-router-dom';
 
 const HistoryTable = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate()
+  const token = localStorage.getItem('relieftoken')
 
   useEffect(() => {
+
+    if(!token){
+      navigate('/signin')
+      return
+    }
+
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://ant-nasty-compiled-requesting.trycloudflare.com/history');
+        const response = await axios.get(`${API_URL}/history`, {
+          headers: {
+              Authorization:`Bearer ${token}`,
+              "ngrok-skip-browser-warning": "69420",
+          }
+      });
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -25,7 +40,7 @@ const HistoryTable = () => {
   if (loading) {
     return (
       <div className="loader-container">
-        <iframe src="https://lottie.host/embed/b60ac804-a166-4481-b0b1-560ab8cb96bc/sLIrOBaHXa.json"></iframe>
+        <iframe src="https://lottie.host/embed/b60ac804-a166-4481-b0b1-560ab8cb96bc/sLIrOBaHXa.json" title="Lottie Animation"></iframe>
       </div>
     );
   }

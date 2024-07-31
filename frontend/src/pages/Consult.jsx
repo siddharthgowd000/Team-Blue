@@ -2,7 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import io from 'socket.io-client';
 import axios from 'axios';
 import './Consult.css'; // Ensure you have this CSS file
-import sid from '../210303124548.jpg'
+import sid from '../assets/210303124548.jpg'
+import API_URL from '../url';
+import { useNavigate } from 'react-router-dom';
 
 const Consult = () => {
   const [doctors, setDoctors] = useState([]);
@@ -11,9 +13,18 @@ const Consult = () => {
   const [newMessage, setNewMessage] = useState('');
   const socket = useRef(null);
 
+  const token = localStorage.getItem('relieftoken')
+  const navigate = useNavigate();
+  
+
   useEffect(() => {
+
+    if(!token){
+      navigate('/signin')
+      return
+    }
     // Fetch doctors from backend
-    axios.get('https://radiation-vip-grow-digest.trycloudflare.com/doctors')
+    axios.get(`${API_URL}/doctors`)
       .then(response => {
         setDoctors(response.data);
       })
@@ -22,7 +33,7 @@ const Consult = () => {
       });
 
     // Initialize socket connection
-    socket.current = io('https://radiation-vip-grow-digest.trycloudflare.com');
+    socket.current = io(`${API_URL}`);
 
     // Listen for incoming messages
     socket.current.on('receiveMessage', (message) => {
@@ -42,7 +53,7 @@ const Consult = () => {
   useEffect(() => {
     if (selectedDoctor) {
       // Fetch messages for the selected doctor
-      axios.get(`https://radiation-vip-grow-digest.trycloudflare.com/messages/${selectedDoctor.id}`)
+      axios.get(`${API_URL}/messages/${selectedDoctor.id}`)
         .then(response => {
           setMessages(response.data);
         })

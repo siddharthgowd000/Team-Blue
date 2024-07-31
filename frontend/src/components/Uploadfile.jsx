@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import './Upload.css';
-import uploadIcon from './file.png';
+import uploadIcon from '../assets/file.png';
+import API_URL from '../url';
 
 const Uploadfile = () => {
   const [media, setMedia] = useState([]);
@@ -10,6 +11,7 @@ const Uploadfile = () => {
   const [loading, setLoading] = useState(false);
   const [selectedType, setSelectedType] = useState('brain');
   const [blinkClass, setBlinkClass] = useState('');
+  const token = localStorage.getItem('relieftoken')
 
   const handleDrop = (e) => {
     e.preventDefault();
@@ -50,10 +52,11 @@ const Uploadfile = () => {
     formData.append('disease', selectedType);
 
     try {
-      const response = await axios.post('https://ant-nasty-compiled-requesting.trycloudflare.com/upload', formData, {
+      const response = await axios.post(`${API_URL}/upload`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           "ngrok-skip-browser-warning": "69420",
+          Authorization:`Bearer ${token}`,
         },
       });
 

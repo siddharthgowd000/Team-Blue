@@ -1,9 +1,9 @@
 import {
-	HiOutlineViewGrid,
-	HiOutlineCube,
-	HiOutlineUsers,
-	HiOutlineDocumentText,
-	HiOutlineAnnotation,
+	// HiOutlineViewGrid,
+	// HiOutlineCube,
+	// HiOutlineUsers,
+	// HiOutlineDocumentText,
+	// HiOutlineAnnotation,
 	HiOutlineQuestionMarkCircle,
 	HiOutlineCog
 } from 'react-icons/hi'
