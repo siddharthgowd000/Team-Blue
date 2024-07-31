@@ -45,7 +45,7 @@ const Signin = () => {
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 mb-2">Password:</label>
+            <label className="block text-gray-700 mb-2">Password</label>
             <input
               type="password"
               value={password}
