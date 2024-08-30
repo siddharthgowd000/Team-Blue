@@ -54,5 +54,5 @@ Ensure you have the following installed:
 
       ```bash
       
-      flask run
+      python app.py
 
