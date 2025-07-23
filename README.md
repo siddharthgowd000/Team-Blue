@@ -35,7 +35,7 @@ Ensure you have the following installed:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/relief.git
+   git clone https://github.com/siddharthgowd000/relief.git
    cd relief
 2. **Install frontend dependencies:**
 
